@@ -10,7 +10,7 @@ public class ValidationUtils {
     public static boolean validateProduct(Product product, int count) throws SQLException {
         String id = Integer.toString(product.getId());
         Product foundProduct = (Product) ProductUtils.getProduct(id);
-        if(count <= foundProduct.getStockCount()){
+        if(count <= foundProduct.getStock_count()){
             return true;
         } else {
             return false;
